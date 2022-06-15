@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
 import CardExampleCard from './components/weather';
+import weatherImg from './weather-img.jpg';
 export default function App() {
   
   const [lat, setLat] = useState([]);
@@ -26,6 +27,9 @@ export default function App() {
   
   return (
     <div className="App">
+      <div class="weather-img">
+      <img src={weatherImg} alt="weather image"/>
+      </div>
       {(typeof data.main != 'undefined') ? (
         <CardExampleCard weatherData={data}/>
       ): (
